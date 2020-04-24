@@ -8,19 +8,23 @@ export const UserModel = (sequelize: Sequelize) => {
             autoIncrement: true
         },
         firstname: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         middlename: {
             type: DataTypes.STRING
         },
         lastname: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         email: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         phone: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         role: {
             type: DataTypes.INTEGER,

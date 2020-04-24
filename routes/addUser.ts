@@ -5,7 +5,8 @@ export const addUser = express.Router();
 
 addUser.post('/', async (req, res) => {
     const newUserData = req.body.newUserData;
-    await Users.create(newUserData)
 
-    res.status(200).end();
+    Users.create(newUserData)
+    .then( () => res.status(200).end())
+    .catch( () => res.status(500).end());
 });

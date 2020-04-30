@@ -1,10 +1,10 @@
 import express from 'express';
-import { Users } from '../index';
+import { User } from '../index';
 
 export const deleteUser = express.Router();
 
 deleteUser.delete('/', async (req, res) => {
-    Users.destroy({
+    User.destroy({
         where: {
             index : req.body.index
         }

@@ -7,14 +7,14 @@ export const UserModel = (sequelize: Sequelize) => {
             primaryKey: true,
             autoIncrement: true
         },
-        firstname: {
+        firstName: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        middlename: {
+        middleName: {
             type: DataTypes.STRING
         },
-        lastname: {
+        lastName: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -42,9 +42,9 @@ export const UserModel = (sequelize: Sequelize) => {
 
 export interface MyUserModel {
     index: number,
-    firstname: string;
-    middlename: string;
-    lastname: string;
+    firstName: string;
+    middleName: string;
+    lastName: string;
     email: string;
     phone: string;
     role: number;

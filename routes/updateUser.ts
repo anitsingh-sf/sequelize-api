@@ -1,10 +1,10 @@
 import express from 'express';
-import { Users } from '..';
+import { User } from '../index';
 
 export const updateUser = express.Router();
 
 updateUser.post('/', async (req, res) => {
-    Users.update(req.body.updatedUserData, {
+    User.update(req.body.updatedUserData, {
         where: {
             index: req.body.updatedUserData.index
         }

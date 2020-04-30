@@ -37,7 +37,7 @@ const sequelize = new Sequelize('user-app', 'postgres', 'Anit123', {
 type UserModelType = typeof Model & {
     new (values?: object, options?: BuildOptions): MyUserModel;
 };
-export const Users = <UserModelType>UserModel(sequelize);
+export const User = <UserModelType>UserModel(sequelize);
 
 type CustomerModelType = typeof Model & {
     new (values?: object, options?: BuildOptions): MyCustomerModel;
@@ -49,10 +49,10 @@ type RoleModelType = typeof Model & {
 };
 export const Role = <RoleModelType>RoleModel(sequelize);
 
-Users.belongsTo(Customer);
-Users.belongsTo(Role);
-Customer.hasMany(Users);
-Role.hasMany(Customer);
+User.belongsTo(Customer);
+User.belongsTo(Role);
+Customer.hasMany(User);
+Role.hasMany(User);
 
 sequelize.sync()
 .then(() => {

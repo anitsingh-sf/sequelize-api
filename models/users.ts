@@ -26,14 +26,14 @@ export const UserModel = (sequelize: Sequelize) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        role: {
+        roleName: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
         address: {
             type: DataTypes.TEXT
         },
-        customer: {
+        customerName: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
@@ -47,7 +47,7 @@ export interface MyUserModel {
     lastName: string;
     email: string;
     phone: string;
-    role: number;
-    customer: number;
+    roleName: number;
+    customerName: number;
     address: string;
 }

@@ -49,12 +49,10 @@ type RoleModelType = typeof Model & {
 };
 export const Role = <RoleModelType>RoleModel(sequelize);
 
-User.belongsTo(Customer);
-User.belongsTo(Role);
 Customer.hasMany(User);
 Role.hasMany(User);
 
 sequelize.sync()
 .then(() => {
-    app.listen(5500, () => console.log("Server started on port", 5500));
+    app.listen(5000, () => console.log("Server started on port", 5000));
 });

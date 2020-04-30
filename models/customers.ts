@@ -1,7 +1,7 @@
 import { DataTypes, Sequelize } from 'sequelize';
 
 export const CustomerModel = (sequelize: Sequelize) => {
-    return sequelize.define('Customers', {
+    return sequelize.define('customers', {
         index: {
             type: DataTypes.INTEGER,
             primaryKey: true,

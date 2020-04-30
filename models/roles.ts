@@ -1,7 +1,7 @@
 import { DataTypes, Sequelize } from 'sequelize';
 
 export const RoleModel = (sequelize: Sequelize) => {
-    return sequelize.define('Roles', {
+    return sequelize.define('roles', {
         index: {
             type: DataTypes.INTEGER,
             primaryKey: true,

@@ -7,14 +7,14 @@ export const UserModel = (sequelize: Sequelize) => {
             primaryKey: true,
             autoIncrement: true
         },
-        firstName: {
+        firstname: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        middleName: {
+        middlename: {
             type: DataTypes.STRING
         },
-        lastName: {
+        lastname: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -26,14 +26,14 @@ export const UserModel = (sequelize: Sequelize) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        roleName: {
+        rolename: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
         address: {
             type: DataTypes.TEXT
         },
-        customerName: {
+        customername: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
@@ -42,12 +42,12 @@ export const UserModel = (sequelize: Sequelize) => {
 
 export interface MyUserModel {
     index: number,
-    firstName: string;
-    middleName: string;
-    lastName: string;
+    firstname: string;
+    middlename: string;
+    lastname: string;
     email: string;
     phone: string;
-    roleName: number;
-    customerName: number;
+    rolename: number;
+    customername: number;
     address: string;
 }
